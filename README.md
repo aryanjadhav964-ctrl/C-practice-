@@ -1,2 +1,2 @@
-# C-practice-
+# Cpp-practice-
 college practical's
