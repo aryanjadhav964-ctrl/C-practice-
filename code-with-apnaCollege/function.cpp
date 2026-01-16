@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
+
 void hello();
+int nFactorial(double n);
 
 int addTwoNums(double num1,double num2) {//parameters[copy of the arguments]
     return num1 + num2;
@@ -46,9 +48,21 @@ int main() {
     double result = calSum(5);
     cout << "Sum : " << result << endl;
 
+    double factResult = nFactorial(5);
+    cout << "Factorial of n you entered : " << factResult << endl;
+
     return 0;
 }
 
 void hello() {
     cout << "Hello User!" << endl;
+}
+
+//function to calculate factorial of n
+int nFactorial (double n) {
+    int fact = 1;
+    for (int i=1; i<=n; i++) {
+        fact *= i;
+    }
+    return fact;
 }
