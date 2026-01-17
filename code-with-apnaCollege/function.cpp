@@ -26,7 +26,25 @@ int calSum(double n) {
     return sum;
 }
 
+//pass by value 
+int changeX(int x) {
+    x = 2*x;
+    cout << "The value of X : " << x << endl;
+}
 
+
+//function to calculate sum of number of digit
+int sumOfDigit (int num) {
+    int digSum = 0;
+
+    while (num > 0) {
+        int lastDig= num % 10;
+        num /= 10;
+        
+        digSum += lastDig;
+    }
+    return digSum;
+}
 
 int main() {
 
@@ -45,11 +63,19 @@ int main() {
     // }
 
 
-    double result = calSum(5);
-    cout << "Sum : " << result << endl;
+    // double result = calSum(5);
+    // cout << "Sum : " << result << endl;
 
-    double factResult = nFactorial(5);
-    cout << "Factorial of n you entered : " << factResult << endl;
+    // double factResult = nFactorial(5);
+    // cout << "Factorial of n you entered : " << factResult << endl;
+
+    //pass by value
+    // int x = 5;
+    // changeX(x);
+
+    // cout << "The X : " << x << endl;
+
+    cout << "Sum of digits : " << sumOfDigit(2356) << endl;
 
     return 0;
 }
