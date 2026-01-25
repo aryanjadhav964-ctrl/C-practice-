@@ -30,9 +30,11 @@ int main() {
     int arr[3] = {10,20,30};
     int *ptrArray = arr; //ptrArray == index 0
     ptrArray++; //ptrArrya starts form next index 1[ adds 1 byte in address]
-    cout << *ptrArray << endl;
+    // cout << *ptrArray << endl;
 
     int newarr[] = {55,44,33,22,11};
+    // cout << arr[] << endl;
+
     // cout << *newarr << endl; //index 0 value 
     // cout << *(newarr+1) << endl; // index 1 value
     // cout << *newarr+1 << endl;//adds 1 in index 0 value 
@@ -52,6 +54,7 @@ int main() {
 
 
     //pointer arithmatics
+
 
 
 
