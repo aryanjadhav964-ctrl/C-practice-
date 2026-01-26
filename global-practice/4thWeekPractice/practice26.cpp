@@ -92,8 +92,11 @@ void largestNumInArray(int* arr) {
 
 //Write a function to reverse an array using pointers.
 void reverse(int *arr) {
-    for (int i=5-1; i>=0; i--) { //Bugguy function
-        cout << *(arr - i) << " ";
+    int start = 0, end = 5-1;
+    while(start < end) {
+        swap(arr[start],arr[end]);
+        start++;
+        end--;
     }
 }
 
@@ -176,8 +179,12 @@ int main() {
     int newArr[5] = {12,4,56,33,2};
     // printArrWithPtr(arr);
     //  largestNumInArray(newArr);
-    // reverse(newArr); //buggy function
-    // oddOREven(newArr); //buggy function
-    oddOREven(newArr);
+    // reverse(newArr); 
+    // oddOREven(newArr); 
+    // oddOREven(newArr);
+
+    // for(int i=0; i<5; i++) {
+    //     cout << newArr[i] << " ";
+    // }
     return 0;
 } 
