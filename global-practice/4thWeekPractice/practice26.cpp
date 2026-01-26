@@ -67,6 +67,56 @@ void valueZeroMaker(int* num1) {
     *num1 = 0;
     cout << "Now Value of variable num1 is : " << *num1 << endl;
 }
+
+//level 3 th according to chatgpt
+//Write a function to print array elements using pointers (no array indexing [] allowed).
+void printArrWithPtr(int *arr){
+    for (int i=0; i<5; i++) {
+        cout << "Array Element at " << i << " index = " << *(arr + i) << endl;
+        //error line
+        // cout << "Array Element at " << i << " index = " << *(arr) + i << endl; 
+    }
+}
+
+//Write a function to find the largest element in an array using pointers.
+void largestNumInArray(int* arr) {
+    int largest = *(arr);
+    for (int i=0; i<5; i++ ) {
+        if (largest < *(arr + i)) {
+            largest = *(arr + i);
+        }
+    }
+
+    cout << "The largest element in array is = " << largest << endl;
+}
+
+//Write a function to reverse an array using pointers.
+void reverse(int *arr) {
+    for (int i=5-1; i>=0; i--) { //Bugguy function
+        cout << *(arr - i) << " ";
+    }
+}
+
+//Write a function to count even and odd numbers in an array using pointers.
+void oddOREven(int *arr) { 
+    int even = 0;
+    int odd = 0;
+    int *ptr = arr;
+
+    for (int i=0; i < 5; i++) {
+        if (*ptr % 2 ==0) {
+            even++;
+        } else {
+            odd++;
+        }
+        ptr++;//move to next element
+    }
+
+    cout << "Even nums = " << even << endl;
+    cout << "Odd nums = " << odd << endl;
+        
+
+}
 int main() {
  //level 1 question practice + logic building
     int a = 10;
@@ -109,8 +159,8 @@ int main() {
     multiplies them
     (print results inside the function) */
     int num1, num2;
-    cout << "Enter num1 : ";
-    cin >> num1;
+    // cout << "Enter num1 : ";
+    // cin >> num1;
     
     // cout << "Enter num2 : ";
     // cin >> num2;
@@ -120,5 +170,14 @@ int main() {
     // numEvenOrOdd(&num1);
     // valueZeroMaker(&num1); //Function makes number zero
     // cout << num1 << endl;
+
+    //array 
+    int arr [5] = {10,20,30,40,50};
+    int newArr[5] = {12,4,56,33,2};
+    // printArrWithPtr(arr);
+    //  largestNumInArray(newArr);
+    // reverse(newArr); //buggy function
+    // oddOREven(newArr); //buggy function
+    oddOREven(newArr);
     return 0;
 } 
