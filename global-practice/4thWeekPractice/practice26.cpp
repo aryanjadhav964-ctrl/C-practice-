@@ -29,6 +29,44 @@ float pointer(float* ptr1,float* ptr2) {
     cout << *ptr1 << " & " << *ptr2 << endl;
 }
 
+//level 2 Questions according to chatgpt 
+void basicMath(int* num1, int* num2) {
+    float sum = *num1 + *num2;
+    cout << "Addition of " << *num1 << " and " << *num2 << " is = " << sum << endl;
+    float sub = *num1 - *num2;
+    cout << "Subtraction of " << *num1 << " and " << *num2 << " is = " << sub << endl;
+    float mul = (*num1) * (*num2);
+    cout << "Addition of " << *num1 << " and " << *num2 << " is = " << mul << endl;
+}
+
+//Write a function that finds maximum of two numbers using pointers.
+void findMax(int* num1,int* num2){
+    if (*num1 > *num2){
+        cout << *num1 << " Is greater" << endl;
+    } else if(*num1 == *num2) {
+        cout << "You entered same number!" << endl;
+        cout << "First number should be different from second number." << endl;
+    } else {
+        cout << *num2 << "  Is greater" << endl;
+    }
+}
+
+//Write a function that takes an integer pointer and:
+//checks whether the number is even or odd
+void numEvenOrOdd(int* num1){
+    if (*num1 % 2 == 0) {
+        cout << *num1 << " Is a EVEN number." << endl;
+    } else {
+        cout << *num1 << " Is a ODD number." << endl;
+    }
+}
+
+//Write a function that takes a pointer and sets its value to 0.
+void valueZeroMaker(int* num1) {
+    cout << "Value you entered of variable num1 is = " << *num1 << endl;
+    *num1 = 0;
+    cout << "Now Value of variable num1 is : " << *num1 << endl;
+}
 int main() {
  //level 1 question practice + logic building
     int a = 10;
@@ -62,5 +100,25 @@ int main() {
     float c = 5,d =6;
     // pointer(&c, &d);
 
+
+    //level 2 = pointer + Function
+
+    /*Write a function that takes two numbers using pointers and:
+    adds them
+    subtracts them
+    multiplies them
+    (print results inside the function) */
+    int num1, num2;
+    cout << "Enter num1 : ";
+    cin >> num1;
+    
+    // cout << "Enter num2 : ";
+    // cin >> num2;
+
+    // basicMath(&num1, &num2);
+    // findMax(&num1,&num2);
+    // numEvenOrOdd(&num1);
+    // valueZeroMaker(&num1); //Function makes number zero
+    // cout << num1 << endl;
     return 0;
 } 
