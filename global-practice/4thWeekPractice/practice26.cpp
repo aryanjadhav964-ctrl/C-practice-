@@ -94,6 +94,7 @@ void largestNumInArray(int* arr) {
 void reverse(int *arr) {
     int start = 0, end = 5-1;
     while(start < end) {
+        //swap(start array pass, ending array pass)
         swap(arr[start],arr[end]);
         start++;
         end--;
@@ -120,6 +121,29 @@ void oddOREven(int *arr) {
         
 
 }
+
+
+//level 4 problems solving accordig to chatgpt
+//function that gives the largest and smallest num using pointer 
+void largeORsmall(int* arr,int* size) {
+    int largest = *arr;
+    int smallest = *arr;
+
+    for (int i = 0; i < *size; i++) {
+        if (largest < *(arr + i)) {
+            largest = *(arr + i);
+        } else if (smallest > *(arr + i)) {
+            smallest = *(arr + i);
+        }
+    }
+
+    cout << "Largest number of given array is = " << largest << endl;
+    cout << "Smallest number of given array is = " << smallest << endl;
+
+}
+
+//palindrome function?
+
 int main() {
  //level 1 question practice + logic building
     int a = 10;
@@ -175,8 +199,9 @@ int main() {
     // cout << num1 << endl;
 
     //array 
-    int arr [5] = {10,20,30,40,50};
-    int newArr[5] = {12,4,56,33,2};
+    int size = 5;
+    int arr [size] = {10,20,30,40,50};
+    int newArr[size] = {12,4,56,33,2};
     // printArrWithPtr(arr);
     //  largestNumInArray(newArr);
     // reverse(newArr); 
@@ -186,5 +211,10 @@ int main() {
     // for(int i=0; i<5; i++) {
     //     cout << newArr[i] << " ";
     // }
+
+    //level 4 starts
+    //  largeORsmall(pass Arr, size of array)
+
+    // largeORsmall(newArr, &size);
     return 0;
 } 
