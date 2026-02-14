@@ -17,18 +17,18 @@ int main() {
         cout << arr[i] << " ";
     }
     cout << " " << endl;
-    cout << "Enter the position to Insert : ";
+    cout << "Enter the position to delet the element : ";
     cin >> pos;
 
-    cout << "Enter the value to insert : ";
-    cin >> value;
+    // cout << "Enter the value to insert : ";
+    // cin >> value;
 
-    for (int i = n; i >= pos; i--) {
-        arr[i] = arr[i-1];
+    for (int i = pos-1; i < n-1; i++) {
+        arr[i] = arr[i+1];
     }
 
-    arr[pos-1] = value;
-    n++;
+    // arr[pos-1] = value;
+    n--;
     cout << "Your array element after insertion" << endl;
     for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
