@@ -1,13 +1,15 @@
-#include <iostream>
-using namespace std;
+#include <iostream>         //header file
+#include <iomanip>
+#define PI 3.14             //preprosesor directive 
+using namespace std;        // use for cout and cin
 
-int areaOfRect();
-void isPass();
-void first_10_Nums();
-float sumOfTwoNum(float num1,float num2);
+int areaOfRect();           //function prototype
+void isPass();              //function prototype
+void first_10_Nums();       //function prototype
+float sumOfTwoNum(float num1,float num2);   //function prototype
 
 
-void student_entry() {
+void student_entry() {          //function definition
     string name;
     int age;
     float marks;
@@ -25,7 +27,12 @@ void student_entry() {
     cout << "Student marks : " << marks << endl;
 }
 
-int main() {
+struct student {
+    string name;
+    int age;
+};
+
+int main() {            //main function[ Starting point ].
     float num1,num2;
     //Write a program that takes a student's name, age, and marks (with decimals) as input and displays them.
     // student_entry();
@@ -41,16 +48,35 @@ int main() {
     // first_10_Nums();
 
     //Write a function that takes two numbers as parameters and returns their sum. Call this function from main() and display the result.
-    cout << "Enter 1st Number : ";
-    cin >> num1;
-    cout << "Enter 2nd Number : ";
-    cin >> num2;
-    float sum = sumOfTwoNum(num1,num2);
-    cout << "Sum of 2 number you entered is : " << sum << endl;
+    // cout << "Enter 1st Number : ";
+    // cin >> num1;
+    // cout << "Enter 2nd Number : ";
+    // cin >> num2;
+    // float sum = sumOfTwoNum(num1,num2);
+    // cout << "Sum of 2 number you entered is : " << sum << endl;
 
+    //type casting in cpp
+    float y = 5.6;
+    int a = (int)y;
+
+    int b = 5;
+    float c = (float)b;
+    char d = 5;
+
+    cout << d << endl; //its giving blank value in terminal.
+    cout << b << endl;
+    cout << c << endl;
+
+    cout << setw(10) << 50; //adds space before cout 
+
+    student s1;
+    s1.name = "aryan";
+    s1.age = 19;
+
+    cout << s1.name;
     return 0;
 }
-void isPass() {
+void isPass() {             //function definition
     float marks;
     cout << " Enter Sudents Marks : ";
     cin >> marks;
