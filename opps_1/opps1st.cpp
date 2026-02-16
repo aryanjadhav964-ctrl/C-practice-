@@ -27,7 +27,7 @@ void student_entry() {          //function definition
     cout << "Student marks : " << marks << endl;
 }
 
-struct student {
+struct student {        //structure
     string name;
     int age;
 };
