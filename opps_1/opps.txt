@@ -1,0 +1,31 @@
+-----------------------//OOPs :----------------------------
+/* Topics -->
+class --- [blueprint for creating objects like student or template]
+object --- [Instance of a class with data and function]
+4 main pillars of OOPs are [encap...,inheri...,poly...,abstract...]
+Encapsulation --- [Hides internal data, only expose what's necessary]
+Inheritance --- [allow one class to inherit properties and behavior from another]
+Polymorphism --- [one function/method behaves differently based on in/out]
+Abstraction --- [Hides complex details, shows only necessary features ]
+*/
+
+//classes and objects
+
+--//classes is a user-defined data type that acts as a blueprint for creating objects.
+--//It groups related variables (called data members) and functions called (member functions) into a single unit.
+
+--//access specifire :
+ [access specifirs define the visibility and accessibility of class members (member functions and data members) ]
+
+--they help enforce data hiding
+
++------------------+----------------------+-----------------------+----------------------+
+| Access Specifier | Accessible in Class  | Accessible in Derived | Accessible Outside   |
+|                  |                      | Class                 | Class                |
++------------------+----------------------+-----------------------+----------------------+
+| private          | Yes                  | No                    | No                   |
+| protected        | Yes                  | Yes                   | No                   |
+| public           | Yes                  | Yes                   | Yes                  |
++------------------+----------------------+-----------------------+----------------------+
+
+for practical example check opps2.cpp file.
